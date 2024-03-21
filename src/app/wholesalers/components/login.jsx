@@ -20,7 +20,7 @@ function Login() {
 
     try {
       // Submit form data to API
-      const response = await fetch('https://example.com/api/submit', {
+      const response = await fetch('https://example.com/api/loginff', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
