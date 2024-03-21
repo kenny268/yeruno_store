@@ -1,4 +1,4 @@
-import Register from "@app/admin/components/register";
+import Register from "@/app/admin/components/register";
 
 const SignUp = () => {
     return (  

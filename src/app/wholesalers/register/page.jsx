@@ -1,9 +1,9 @@
-import Register from "@/app/wholesalers/components/register";
+import Form from "@/app/wholesalers/components/register/form";
 
 const SignUP = () => {
     return (
-        <Register/>
+            <Form />
       );
 }
-P
-export default SignUp;
+
+export default SignUP;
