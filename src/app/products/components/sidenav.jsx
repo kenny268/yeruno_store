@@ -3,7 +3,7 @@ import Link from "next/link";
 const SideNav = () => {
     return (  
         <div>
-            <h1>Category</h1>
+            <h1 className="font-medium text-2xl">Category</h1>
             <nav>
                 <div>
                     <Link href="#">Automotive </Link>
