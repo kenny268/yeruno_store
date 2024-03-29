@@ -6,14 +6,19 @@ import Footer from "./components/footer";
 const Products = () => {
  
     return ( 
-    <div className="bg-slate-700">
+    <div className="bg-slate-300">
         <NavBar/>
-        <SideNav/>
-        <ProductsPage/>
+        <div className="flex flex-row items-start w-full mt-3">
+            <div className="flex flex-col items-start pl-4 w-1/5">
+                <SideNav/>
+            </div>
+            <dir className="flex flex-col pl-1 w-4/5">
+                <ProductsPage/>
+            </dir>
+        </div>
         <Footer/>
     </div>
      );
 }
  
-export default Products
-;                                 
+export default Products;                                 
