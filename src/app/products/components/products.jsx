@@ -7,11 +7,16 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const ProductsPage = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [isVisible, setIsVisible] = useState(true);
     const images = ['/automotive.jpg','/banner.jpg','/beverages.jpg','/computer.jpg','/electronics.jpg'];
-
     
     useEffect(() => {
       const interval = setInterval(() => {
+        setIsVisible(true);
+        setTimeout(() => {
+          setIsVisible(false); // Slide out visibility after 4.5 seconds
+        }, 4500);
+        
         setCurrentImageIndex(prevIndex =>
           prevIndex === images.length - 1 ? 0 : prevIndex + 1
         );
@@ -32,7 +37,7 @@ const ProductsPage = () => {
         );
       };
 
-   
+  
 
     return (  
         <div className='shadow-md  mr-6'>
@@ -53,7 +58,12 @@ const ProductsPage = () => {
             <button onClick={goToPreviousImage} className='absolute top-2/4 bg-slate-500 p-2 hover:bg-rose-700 hover:text-white'> <IoIosArrowBack className="w-8 h-5 rounded-sm hover:text-white"/></button>
 
             <button onClick={goToNextImage} className='absolute top-2/4 right-6 bg-slate-500 p-2  hover:bg-rose-700 hover:text-white'><IoIosArrowForward  className="w-8 h-5 rounded-sm hover:text-white"/></button>
-
+            
+            <div className={`absolute top-1/3 w-96 left-1/3 bg-black p-3 bg-opacity-35 rounded-sm shadow-md' ${isVisible ? 'opacity-100 transition-opacity duration-500 ease-in-out' : 'opacity-0 transition-opacity duration-500 ease-in-out'}`}>
+              <h1 className='text-3xl text-white font-semibold'>Your Store</h1>
+              <p className='text-white'>Discover endless wholesale possibilities with Yeruno - where quality meets affordability, catering to all your business needs effortlessly.</p>
+               <button className='text-white pt-1 pb-1 pr-2 pl-2 rounded-sm shadow-md bg-rose-700'>Shop Now</button> 
+            </div>
             <div>
                 
 
